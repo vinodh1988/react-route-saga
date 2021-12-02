@@ -1,27 +1,31 @@
 
+import {BrowserRouter as Router,Link} from 'react-router-dom'
+import RouterHome from './ReactComponents/RouteHome'
 
 const App=()=>{
    return(
+  <Router>
      <div><nav className="navbar navbar-expand-sm bg-dark navbar-dark">
      <div className="container-fluid">
        <ul className="navbar-nav">
          <li className="nav-item">
-           <a className="nav-link active" href="#">Active</a>
+           <Link className="nav-link active" to="/">ABC APP</Link>
          </li>
          <li className="nav-item">
-           <a className="nav-link" href="#">Link</a>
+           <Link className="nav-link" to="/">Home</Link>
          </li>
          <li className="nav-item">
-           <a className="nav-link" href="#">Link</a>
+           <Link className="nav-link" to="/about-us">About US</Link>
          </li>
          <li className="nav-item">
-           <a className="nav-link disabled" href="#">Disabled</a>
+           <Link className="nav-link " to="/people">People</Link>
          </li>
        </ul>
      </div>
    </nav>
-   
+   <RouterHome></RouterHome>
      </div>
+    </Router>
    )
 }
 
