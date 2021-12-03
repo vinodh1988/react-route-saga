@@ -1,5 +1,7 @@
 
 import { useEffect,useState } from "react"
+import QuoteShowHOC from "../Redux/HOC/QuoteShowHOC"
+import { invokeAction } from "../Redux/Store/store"
 
 
 const Fun=()=>{
@@ -20,11 +22,15 @@ const Fun=()=>{
 
 
     return(
-        <div className="card" style={{width:"400px",cursor: "pointer"}}>
+    <div className="card">
+        <div className="card" style={{width:"400px",cursor: "pointer"}} 
+        onClick={()=>{invokeAction(url)}}>
              <img src={url} style={{height:"250px", width: "100%"}} alt="noimage" />
              
              <h3>Click cat for cat facts and man for Quotes</h3>
         </div>
+         <QuoteShowHOC></QuoteShowHOC>
+    </div>
     )
 }
 
