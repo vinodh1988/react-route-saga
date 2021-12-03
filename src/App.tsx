@@ -18,7 +18,7 @@ const App=()=>{
            <Link className="nav-link" to="/about-us">About US</Link>
          </li>
          <li className="nav-item">
-           <Link className="nav-link " to="/people">People</Link>
+           <Link className="nav-link " to="/fun">Fun</Link>
          </li>
        </ul>
      </div>
