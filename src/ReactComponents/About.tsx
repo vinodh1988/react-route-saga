@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Context, reactStore} from "../Context/ContextAPI"
 import DataUnit from "./DataUnit"
+import MemoUnit from "./MemoUnit"
 import MessageUnit from "./MessageUnit"
 
 
@@ -12,6 +13,7 @@ const About=()=>{
                 <Context.Provider value={{...reactStore,message: message, changeMessage: setMessage}} >
                         <DataUnit></DataUnit>
                         <MessageUnit></MessageUnit>
+                        <MemoUnit></MemoUnit>
                 </Context.Provider>
         </div>
     )
